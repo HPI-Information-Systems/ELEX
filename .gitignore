@@ -1,0 +1,13 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# builds
+dist
+node_modules
+static
+
+# other
+.DS_STORE

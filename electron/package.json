@@ -1,0 +1,39 @@
+{
+  "name": "elex",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "repository": "https://github.com/HPI-Information-Systems/ELEX",
+  "author": "Benjamin Feldmann <benjamin-feldmann@web.de>",
+  "license": "MIT",
+  "description": "A graph exploration tool that makes it easier to understand graphs",
+  "scripts": {
+    "dist": "build",
+    "pack": "build --dir",
+    "dist-win": "build --win",
+    "dist-mac": "build --mac",
+    "pack-linux": "build --linux --dir"
+  },
+  "build": {
+    "appId": "bjennware.elex",
+    "mac": {
+      "category": "public.app-category.business",
+      "icon": "icon.icns"
+    },
+    "win": {
+      "icon": "icon"
+    },
+    "files": [
+      "**/*",
+      "!dev.js",
+      "!yarn.lock",
+      "static/*"
+    ],
+    "directories": {},
+    "copyright": "Copyright © 2019 Benjamin Feldmann"
+  },
+  "devDependencies": {
+    "electron": "^4.0.7",
+    "electron-builder": "^20.38.5"
+  }
+}
