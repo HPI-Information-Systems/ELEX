@@ -14,9 +14,13 @@
   position: relative;
 
   h2 {
+    width: 298px;
     position: absolute;
     bottom: 16px;
-    color: white
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

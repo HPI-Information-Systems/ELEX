@@ -78,9 +78,9 @@ class InfoSideBar extends Component {
 
     const renderLinkName = (link) => {
       if (link.source && link.target) {
-        return `Link(${obj.type}) ${obj.source.props.__label} -> ${obj.target.props.__label}`;
+        return `[${obj.type}] ${obj.source.props.__label} -> ${obj.target.props.__label}`;
       }
-      return `Link(${obj.type})`;
+      return `[${obj.type}]`;
     };
 
     return (

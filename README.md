@@ -36,17 +36,35 @@ To upload GraphML files you need to click on the graph icon on the top-left corn
 Now you can search in the search for your nodes. Keep in mind that a node needs the attribute `name` to be searchable.
 With a double click you explore the surrounding area of a node (load in all neighbours).
 
+**GraphML Node/Edge Schema:**  
+Every Attribute of a node (or edge) is visible in the sidebar. Exceptions are Attributes beginning with one or two `_`.
+The key from attributes with one `_` is visible. If the attribute starts with two `__` the key AND the value are not shown.
+Attributes with starting with `__` are used internally in the application to layout the graph and could be overwritten so I advise you from using other than the attributes found in the next section.
+
+Special attribute keys:
+- `__cover`: base64 String image that is shown in the sidebar
+- `__weight`: determine how big a node relative to all other nodes is. The node weights are mapped to a logarithmic scale and the node with the highest weight is always as big as possible whether the weight is 5 or 5000. Default weight is `20`.
+- `__size`: determine how big a node (wide an edge) is. This value is absolute and overwrites the node weight setting. A node with a `__size` attribute could be bigger or smaller than a node size calculated with given weight.
+
+Example:
+```
+<data key="v_name">Prag</data>
+      <data key="v_type">Location</data>
+      <data key="v_color">#BF5B17</data>
+```
+
 #### Feature List
 
 - Upload GraphML files (not saved - just loaded into the browser)
-- Search and explore the uploaded graph
+- Explore the uploaded graph (double click on node)
 - View Attributes of Nodes and Edges (by clicking on them)
 - Filter Node or Edge Types in and out (by clicking on the legend in the top-right corner)
 - Filter Nodes and Edges by their attributes (click on the filter icon in the left toolbar)
 - Save the graph as png (camera icon in the toolbar)
 - Save currently viewed graph back as GraphML
+- Add virtual Nodes and Edges to the graph (via bottom-right menu)
 
-## Future Plans
+## Future Plans / Features
 These features are in no particular order
 
 - [ ] Graphs can downloaded as GraphML files. When the saved graph is uploaded again it is possible to explore the new graph again. The new feature is to save the layout into the GraphML and load the graph with all saved coordinates.
@@ -57,6 +75,7 @@ These features are in no particular order
 - [ ] Add Fish-Eye Graph View (maybe dependent on WebGL feature)
 - [ ] Support other graph formats
 - [ ] Render Node and Edge Attributes with MarkDown
+- [ ] Connect Application to a backend with an endpoint that provides graph data
 
 I'm open for other ideas and feature requests!
 

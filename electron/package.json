@@ -27,7 +27,7 @@
       "**/*",
       "!dev.js",
       "!yarn.lock",
-      "static/*"
+      "../build/static/*"
     ],
     "directories": {},
     "copyright": "Copyright © 2019 Benjamin Feldmann"

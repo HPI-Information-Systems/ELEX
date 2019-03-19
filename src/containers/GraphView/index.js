@@ -106,7 +106,7 @@ class GraphView extends Component {
         node.props.__color = self.getRiskColors(node.props.risk);
       }
 
-      if (!node.props.__weight) node.props.__weight = 15;
+      if (!node.props.__weight) node.props.__weight = 20;
       if (!node.props.__color) node.props.__color = self.props.config.getColor(node.type);
       if (!node.props.__hasDetails) node.props.__hasDetails = false;
 

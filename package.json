@@ -14,10 +14,10 @@
     "lint": "eslint ./app -f table",
     "lint:fix": "eslint ./app -f table --fix",
     "electron": "electron ./electron/dev.js",
-    "build-electron": "yarn run buildStatic && cd electron && yarn run dist",
-    "build-electron-win": "yarn run buildStatic && cd electron && yarn run dist-win",
-    "build-electron-mac": "yarn run buildStatic && cd electron && yarn run dist-mac",
-    "build-electron-linux": "yarn run buildStatic && cd electron && yarn run pack-linux"
+    "build-electron": "npm run build && cd electron && npm run dist",
+    "build-electron-win": "npm run build && cd electron && npm run dist-win",
+    "build-electron-mac": "npm run build && cd electron && npm run dist-mac",
+    "build-electron-linux": "npm run build && cd electron && npm run pack-linux"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.11.0",
