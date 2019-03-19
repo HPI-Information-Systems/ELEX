@@ -45,12 +45,20 @@ Special attribute keys:
 - `__cover`: base64 String image that is shown in the sidebar
 - `__weight`: determine how big a node relative to all other nodes is. The node weights are mapped to a logarithmic scale and the node with the highest weight is always as big as possible whether the weight is 5 or 5000. Default weight is `20`.
 - `__size`: determine how big a node (wide an edge) is. This value is absolute and overwrites the node weight setting. A node with a `__size` attribute could be bigger or smaller than a node size calculated with given weight.
+- `__color`: node color in hex representation 
 
 Example:
 ```
-<data key="v_name">Prag</data>
-      <data key="v_type">Location</data>
-      <data key="v_color">#BF5B17</data>
+<key id="v_name" for="node" attr.name="name" attr.type="string"/>
+<key id="v_color" for="node" attr.name="__color" attr.type="string"/>
+<key id="v_type" for="node" attr.name="type" attr.type="string"/>
+<graph>
+  <node id="n0">
+    <data key="v_name">Berlin</data>
+    <data key="v_type">Location</data>
+    <data key="v_color">#BF5B17</data>
+  </node>
+</graph>
 ```
 
 #### Feature List
