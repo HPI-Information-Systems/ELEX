@@ -1,0 +1,48 @@
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.card_title {
+  height: 128px;
+  margin: -25px;
+  margin-bottom: 0px;
+  padding: 25px;
+  background-color: #4285F4;
+  color: white;
+  position: relative;
+
+  h2 {
+    position: absolute;
+    bottom: 16px;
+    color: white
+  }
+}
+
+.subHeader {
+  font-weight: normal;
+}
+
+.empty_space {
+  height: 50px;
+}
+
+.sidebar_scroll {
+  height: 100%;
+  overflow-y: auto;
+}
+
+aside {
+  border: none;
+}
+
+.bar {
+  width: 408px;
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
+.full_width{
+  width: 100%;
+}

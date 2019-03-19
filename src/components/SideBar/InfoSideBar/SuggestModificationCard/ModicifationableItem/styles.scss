@@ -1,0 +1,40 @@
+.attr_name {
+  min-width: 100px;
+  float: left;
+  color: #444444;
+  font-weight:bold;
+}
+
+.attr_value {
+  float: left;
+}
+
+.attr_delete {
+  float: right;
+}
+
+.color_picker {
+  text-align: center;
+  margin-top: 14px;
+  z-index: 999;
+}
+
+.attr_container {
+  width: 100%;
+  float: left;
+}
+
+.edit_container {
+  width: 100%;
+  float: left;
+}
+
+.divider {
+  float: left;
+  height: 14px;
+  width: 100%;
+}
+
+.attr_old_val {
+  text-decoration: line-through;
+}

@@ -1,0 +1,23 @@
+.icon {
+  color: #e0e0e0;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.active {
+  color: #2979ff;
+}
+
+.disabled {
+  color: grey;
+}
+
+.rolling {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

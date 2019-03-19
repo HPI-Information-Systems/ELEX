@@ -1,0 +1,92 @@
+.network {
+  height: 100vh;
+  width: calc(100vw - 60px);
+  position: absolute;
+  left: 60px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  fill-opacity: 0;
+}
+
+.brush {
+  //stroke          : blue;
+  //stroke-dasharray: 5px;
+  //stroke-opacity  : 0.5;
+  //fill            : transparent;
+
+  fill-opacity: 0.1;
+  stroke: #fff;
+}
+
+.node circle {
+  fill: #888888;
+
+  stroke: #fff;
+  stroke-width: 2px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.node text {
+  fill: #888888;
+
+  fill-opacity: 0.4;
+  opacity: 0.4;
+  stroke-opacity: 0.4;
+
+  stroke: none;
+  font-size: 0.6em;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.link {
+  stroke: #cccccc;
+  stroke-opacity: 0.5;
+  cursor: pointer;
+  fill: none;
+}
+
+.text {
+  fill: #888888;
+  //fill: transparent;
+  text-align: center;
+
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.icon {
+  font-family: 'Material Icons';
+
+  text-anchor: middle;
+  text-rendering: optimizeSpeed;
+  cursor: pointer;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.highlight {
+  fill: transparent;
+  stroke-width: 4px;
+  stroke-opacity: 0.8;
+
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}

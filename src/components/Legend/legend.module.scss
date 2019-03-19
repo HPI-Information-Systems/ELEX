@@ -1,0 +1,27 @@
+.container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.link {
+  justify-content: flex-end;
+  margin-bottom: 4px;
+
+  i {
+    position: relative;
+    top: 6px;
+  }
+}
+
+.link abbr {
+  margin-right: 4px;
+}
+
+.clicked {
+  color: gray;
+}

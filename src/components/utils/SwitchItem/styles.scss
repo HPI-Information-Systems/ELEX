@@ -1,0 +1,22 @@
+.active {
+  background-color: rgb(238, 238, 238);
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+
+.clickable {
+  cursor: grab;
+}
+
+.divider {
+  background-color: rgb(238, 238, 238);
+  border: 0;
+  height: 1px;
+  margin: -1px 0 0;
+}

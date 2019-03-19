@@ -1,0 +1,28 @@
+@import '~antd/dist/antd.css';
+
+main,
+main > section {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  height: 100%;
+
+  section {
+    height: 400px;
+    flex: 1;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.search-bar {
+  position: absolute;
+  top: 11px;
+  left: 85px;
+  width: 294px;
+  height: 64px;
+}

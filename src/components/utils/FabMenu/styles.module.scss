@@ -1,0 +1,84 @@
+// main button diameter
+$main_button_size: 56px !default;
+// main button diameter
+$child_button_size: 56px !default;
+// the distance of the main button from the closest corners of the screen
+$border-distance: 25px !default;
+// font-size for labels
+$labels-font-size: 13px !default;
+// top & bottom padding for the labels
+$labels-padding-vertical: 4px !default;
+// left & right padding for the labels
+$labels-padding-horizontal: 10px !default;
+
+.fab_component {
+  box-sizing: border-box; // A better box-sizing
+  margin: $border-distance;
+  position: fixed;
+  white-space: nowrap;
+  z-index: 30;
+  // this padding is really needed  only if the element is an <ul>
+  // otherwise it can probably be ditched.
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.fab_top_left {
+  @extend .fab_component;
+  left: 0;
+  top: 0;
+}
+
+.fab_top_right {
+  @extend .fab_component;
+  right: 0;
+  top: 0;
+}
+
+.fab_bottom_left {
+  @extend .fab_component;
+  left: 0;
+  bottom: 0;
+}
+
+.fab_bottom_right {
+  @extend .fab_component;
+  right: 0;
+  bottom: 0;
+}
+
+.fab_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.fab_item {
+  padding: 10px 0;
+  margin: -10px 0;
+}
+
+.fab_main {
+  padding-top: 10px;
+}
+
+.zoom_in {
+  -webkit-transform: scale(01);
+  transform: scale(1);
+  transition: all 0.5s;
+  transition-delay: 0.05s;
+}
+
+.zoom_out {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.05s;
+}
+
+.fab_clickable {
+  cursor: pointer;
+  -webkit-user-drag: none;
+}
