@@ -42,11 +42,15 @@ The key from attributes with one `_` is visible. If the attribute starts with tw
 Attributes with starting with `__` are used internally in the application to layout the graph and could be overwritten so I advise you from using other than the attributes found in the next section.
 
 Special attribute keys:
+- `name`: String representation of a node that is searchable and displayed in the graph. This is the MOST important attribute of a node.
+- `type`: Nodes are classified into different types. (Person, Location, Company, ...). It is advised but not necessary to give a node a type. Every String is supported some types have special node icons. (see below)
 - `__cover`: base64 String image that is shown in the sidebar
 - `__weight`: determine how big a node relative to all other nodes is. The node weights are mapped to a logarithmic scale and the node with the highest weight is always as big as possible whether the weight is 5 or 5000. Default weight is `20`.
 - `__radius`: determine how big a node is. This value is absolute and overwrites the node weight setting. A node with a `__radius` attribute could be bigger or smaller than a node size calculated with given weight.
 - `__width`: determine how big an edge is. This value is absolute and overwrites the edge weight setting. An edge with a `__width` attribute could be bigger or smaller than an edge size calculated with given weight. You should use `width` values from `1` to `4` for good clarity
 - `__color`: node color in hex representation 
+
+Node Types with icons (case insensitive): Actor, Person, Customer, movie, Product, Country, Organization, Location, Address, City, Company, Business, Boat, Ship, Vessel, Order 
 
 Example:
 ```
