@@ -27,6 +27,7 @@ export const SIDEBAR_SHOW_GRAPH = 'sidebar_show_graph';
 
 export const LAYOUT_GRAPH_DBL_TREE = 'layout_graph_double_tree';
 export const LAYOUT_GRAPH_FORCE = 'layout_graph_force';
+export const LAYOUT_EDGE_CURVED = 'layout_edge_curved';
 
 export const FILTER_REMOVE_LEGEND = 'filter_remove_legend';
 export const FILTER_NODE_TYPE = 'filter_node_type';

@@ -515,6 +515,7 @@ class GraphView extends Component {
             this.props.layoutAsDoubleTree(this.props.events.selected.concat(d));
           }}
           removeNode={this.props.removeNode}
+          useCurvedEdges={this.props.layout.useCurvedEdges}
         />
 
         <Legend />
