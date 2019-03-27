@@ -17,3 +17,9 @@ rules:
   prettier/prettier: ["error"]
   object-curly-newline: ["error", { multiline: true }]
   react/jsx-filename-extension: 0
+
+settings:
+  import/resolver:
+    node:
+      paths:
+        - src

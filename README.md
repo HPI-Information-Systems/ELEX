@@ -101,6 +101,7 @@ I'm open for other ideas and feature requests!
 
 ## Stack
 - [x] [CRA](https://facebook.github.io/create-react-app/)
+- [x] [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [x] [React 16.x](https://facebook.github.io/react/)
 - [x] [Redux](http://redux.js.org/)
 - [x] [Babel](https://babeljs.io/)

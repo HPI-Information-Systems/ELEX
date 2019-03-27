@@ -42,7 +42,7 @@ export default function tick(selection) {
 
     for (let i = todoLink; i < goal; i++) {
       l = linkSelection._groups[0][i];
-      l.setAttribute('d', linkArc(l.__data__));
+      l.setAttribute('d', linkArc(l.__data__, self.props.useCurvedEdges));
     }
 
     todoLink = goal;
@@ -92,21 +92,22 @@ export default function tick(selection) {
     return `translate(${self.mapToXScale(d.x)} , ${self.mapToYScale(d.y)})`;
   });
 
-  function linkArc(d) {
-    const dx = lineX2(d) - lineX(d),
-      dy = lineY2(d) - lineY(d),
-      dr = Math.sqrt(dx * dx + dy * dy),
-      // unevenCorrection = (d.__sameUneven ? 0 : 0.5),
-      // arc = ((dr * d.__maxSameHalf) / (d.__sameIndexCorrected - unevenCorrection));
-      // arc = (dr * 2 / d.__sameIndex);
-      percent = d.__sameIndex / d.__maxIndex,
-      min = dr * 2,
-      max = dr * 0.85,
-      arc = min + percent * (max - min);
+  function linkArc(d, useArc = true) {
+    const dx = lineX2(d) - lineX(d);
+    const dy = lineY2(d) - lineY(d);
+    const dr = Math.sqrt(dx * dx + dy * dy);
+    // unevenCorrection = (d.__sameUneven ? 0 : 0.5),
+    // arc = ((dr * d.__maxSameHalf) / (d.__sameIndexCorrected - unevenCorrection));
+    // arc = (dr * 2 / d.__sameIndex);
+    const percent = d.__sameIndex / d.__maxIndex;
+    const min = dr * 2;
+    const max = dr * 0.85;
 
-    // if (d.__sameMiddleLink) {
-    //     arc = 0;
-    // }
+    let arc = min + percent * (max - min);
+
+    if (!useArc) {
+      arc = 0;
+    }
 
     const svgData =
       'M' +
