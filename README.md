@@ -68,21 +68,27 @@ Example:
 
 #### Feature List
 
+Graph Data
 - Upload GraphML files (not saved - just loaded into the browser)
+- Save the graph as png (camera icon in the toolbar)
+- Save currently viewed graph back as GraphML
+- Add virtual Nodes and Edges to the graph (via bottom-right menu)
+
+Exploration / Navigation
 - Explore the uploaded graph (double click on node)
 - View Attributes of Nodes and Edges (by clicking on them)
 - Filter Node or Edge Types in and out (by clicking on the legend in the top-right corner)
 - Filter Nodes and Edges by their attributes (click on the filter icon in the left toolbar)
-- Save the graph as png (camera icon in the toolbar)
-- Save currently viewed graph back as GraphML
-- Add virtual Nodes and Edges to the graph (via bottom-right menu)
+
+
+Graph Style:
+- Switch between curved and straight edges 
 
 ## Future Plans / Features
 These features are in no particular order
 
 - [ ] Graphs can downloaded as GraphML files. When the saved graph is uploaded again it is possible to explore the new graph again. The new feature is to save the layout into the GraphML and load the graph with all saved coordinates.
 - [ ] Make it possible to switch between geometric and optical zoom.
-- [ ] Add an option to switch between curved and straight edges.
 - [ ] Edit attributes of nodes and edges while viewing the graph.
 - [ ] Add Graph View made with WebGL to support MUCH bigger graphs
 - [ ] Add Fish-Eye Graph View (maybe dependent on WebGL feature)
