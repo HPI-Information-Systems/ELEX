@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Card, Radio, Button, Form } from 'antd';
 import FileReaderInput from 'react-file-reader-input';
 import { clearGraphMLAction, useGraphMLAction } from 'actions/graphmlActions';
+import { useCurvedEdges, useStraightEdges } from 'actions/layoutActions';
 import fileDownload from 'js-file-download';
 
 import graphToGraphML from './graphToGraphML';
@@ -13,7 +14,7 @@ const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
 const FormItem = Form.Item;
 
-const GraphSideBar = ({ useGraphMLAction, graphml }) => {
+const GraphSideBar = ({ useGraphMLAction, graphml, useCurvedEdges, useStraightEdges, layout }) => {
   const handleGraphmlRead = (e, results) => {
     results.forEach((result) => {
       const [ev] = result;
@@ -36,6 +37,14 @@ const GraphSideBar = ({ useGraphMLAction, graphml }) => {
     ) : (
       ''
     );
+
+  const handleEdgeStyleChange = (ev) => {
+    if (ev.target.value === 'curved') {
+      useCurvedEdges();
+    } else {
+      useStraightEdges();
+    }
+  };
 
   return (
     <Card className={`${styles.card}`}>
@@ -65,16 +74,29 @@ const GraphSideBar = ({ useGraphMLAction, graphml }) => {
             </RadioButton>
           </RadioGroup>
         </FormItem>
+
+        <FormItem label="Edge Style">
+          <RadioGroup
+            defaultValue="curved"
+            buttonStyle="solid"
+            className="full-width"
+            onChange={handleEdgeStyleChange}
+            value={layout.useCurvedEdges ? 'curved' : 'straight'}
+          >
+            <RadioButton value="curved">Curved</RadioButton>
+            <RadioButton value="straight">Straight</RadioButton>
+          </RadioGroup>
+        </FormItem>
       </Form>
     </Card>
   );
 };
 
 function mapStateToProps(state) {
-  return { graphml: state.graphml };
+  return { graphml: state.graphml, layout: state.layout };
 }
 
 export default connect(
   mapStateToProps,
-  { useGraphMLAction, clearGraphMLAction }
+  { useGraphMLAction, clearGraphMLAction, useCurvedEdges, useStraightEdges }
 )(GraphSideBar);

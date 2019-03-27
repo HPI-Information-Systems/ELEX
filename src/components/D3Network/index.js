@@ -55,7 +55,10 @@ class D3Network extends Component {
     ) {
       if (nextProps.showLabels !== this.props.showLabels) {
         this.showLabels = nextProps.showLabels;
-        this.updateD3Bindings(this.state.nodes, this.state.links, 'texts');
+        this.updateD3Bindings(this.state.nodes, this.state.links, 'all');
+      }
+      if (nextProps.useCurvedEdges !== this.props.useCurvedEdges) {
+        tick.bind(this)(this.network, this);
       }
       return;
     }
